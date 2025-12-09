@@ -231,6 +231,16 @@ body {
 main {
   flex: 1 1 auto;
 }
+.animate-item {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 .container {
   max-width: 1228px;
   width: 100%;
@@ -503,6 +513,9 @@ background: #386FDE;
 .d-possibilities-item:nth-child(1) {
   padding: 35px 36px 37px 36px;
 }
+.d-possibilities-item-image picture{
+  display: flex;
+}
 .d-possibilities-item:nth-child(1) .d-possibilities-item-image {
   max-width: 298px;
   margin: 37px auto 0;
@@ -510,7 +523,7 @@ background: #386FDE;
 .d-possibilities-item:nth-child(2) .d-possibilities-item-image {
   max-width: 391px;
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
   min-width: 391px;
@@ -525,7 +538,7 @@ background: #386FDE;
 }
 .d-possibilities-item:nth-child(4) .d-possibilities-item-image {
   max-width: 195px;
-  margin: 33px auto 0;
+  margin: 33px  auto 0;
 }
 .d-possibilities-item:nth-child(4) {
   padding: 35px 36px 30px 36px;
@@ -535,7 +548,7 @@ background: #386FDE;
 }
 .d-possibilities-item:nth-child(5) .d-possibilities-item-image {
   max-width: 223px;
-  margin: 22px auto 0;
+  margin: 30px auto 0 ;
 }
 .d-possibilities-item:nth-child(6) {
   padding: 35px 36px 30px 36px;
@@ -755,7 +768,9 @@ background: #386FDE;
     margin: 28px auto 0;
   }
   .d-possibilities-item:nth-child(2) .d-possibilities-item-image {
-    bottom: -40px;
+    position: initial;
+    margin-top: auto;
+    transform: unset;
   }
 }
 @media (max-width: 576px) {
@@ -859,9 +874,10 @@ background: #386FDE;
   .d-possibilities-item-title {
     font-size: 18px;
     line-height: 22px;
+    margin-bottom: 32px;
   }
   .d-possibilities-item:nth-child(1) .d-possibilities-item-image {
-    margin: 26px auto 0;
+    margin: 0 auto;
   }
   .d-possibilities-items {
     gap: 10px;
@@ -880,7 +896,7 @@ background: #386FDE;
     padding: 35px 17px 18px 17px;
   }
   .d-possibilities-item:nth-child(5) .d-possibilities-item-image {
-    margin: 31px auto 0;
+    margin:0 auto;
     max-width: 127px;
   }
   .d-possibilities-item:nth-child(5) {
@@ -895,7 +911,7 @@ background: #386FDE;
     padding: 35px 17px 9px 17px;
   }
   .d-possibilities-item:nth-child(8) .d-possibilities-item-image {
-    margin: 42px auto 0;
+    margin: 0 auto;
   }
   .d-possibilities-item:nth-child(7) .d-possibilities-item-image {
     bottom: -40px;
@@ -903,11 +919,14 @@ background: #386FDE;
   .d-possibilities-item:nth-child(9) {
     min-height: 238px;
   }
+  .d-possibilities-item:nth-child(4) .d-possibilities-item-image{
+    margin: 0 auto;
+  }
   .d-possibilities-item:nth-child(9) {
     padding: 35px 17px 9px 17px;
   }
   .d-possibilities-item:nth-child(9) .d-possibilities-item-image {
-    margin: 26px auto 0;
+    margin: 0 auto;
   }
   .d-possibilities-item:nth-child(9) .d-possibilities-item-image {
     max-width: 150px;
@@ -947,37 +966,6 @@ background: #386FDE;
     line-height: 9px;
   }
 
-}
-@media (max-width: 560px) {
- .d-possibilities-item:nth-child(2) .d-possibilities-item-image {
-    bottom: -120px;
-  }
-}
-@media (max-width: 540px) {
- .d-possibilities-item:nth-child(2) .d-possibilities-item-image {
-    bottom: -100px;
-  }
-}
-@media (max-width: 500px) {
- .d-possibilities-item:nth-child(2) .d-possibilities-item-image {
-    bottom: -80px;
-  }
-}
-
-@media (max-width: 470px) {
-  .d-possibilities-item:nth-child(2) .d-possibilities-item-image {
-    bottom: -70px;
-  }
-}
-@media (max-width: 455px) {
-  .d-possibilities-item:nth-child(2) .d-possibilities-item-image {
-    bottom: -40px;
-  }
-}
-@media (max-width: 430px) {
-  .d-possibilities-item:nth-child(2) .d-possibilities-item-image {
-    bottom: -30px;
-  }
 }
 
  

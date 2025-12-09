@@ -94,3 +94,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".animate-item");
+    if (!items.length) return; 
+
+    const observer = new IntersectionObserver((entries) =>
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+
+            const index = [...items].indexOf(entry.target);
+            entry.target.style.transitionDelay = `${ 0.15}s`;
+            entry.target.classList.add("visible");
+
+            observer.unobserve(entry.target);
+        })
+    , { threshold: 0.1 });
+
+    items.forEach(item => observer.observe(item));
+});
