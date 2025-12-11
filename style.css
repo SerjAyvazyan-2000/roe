@@ -678,7 +678,7 @@ background: #386FDE;
   border-radius: 50%;
 }
 .d-footer {
-  padding: 88px 0 136px 0;
+  padding: 74px 0 97px 0;
   background: #f6f6f6;
   margin-top: 100px;
 }
@@ -686,7 +686,7 @@ background: #386FDE;
   gap: 30px;
 }
 .d-footer-logo {
-  max-width: 485px;
+  max-width: 378px;
   width: 100%;
 }
 .d-footer-body p {
@@ -952,7 +952,7 @@ background: #386FDE;
     margin-top: 50px;
   }
   .d-footer {
-    padding: 88px 0 84px 0;
+    padding: 72px 0 84px 0;
     margin-top: 50px;
   }
   .d-footer-logo {
